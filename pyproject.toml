@@ -1,5 +1,14 @@
-[project]
+[tool.poetry]
 name = "rntest"
 version = "0.1.0"
-requires-python = ">=3.9"
-dependencies = ["idna==3.4"]
+description = "Reference fixture: reproduces a real Renovate missing-tool artifactError (poetry not installed) for classifier regression testing in khepri-deps/renovate"
+authors = ["test <test@example.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+idna = "3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
