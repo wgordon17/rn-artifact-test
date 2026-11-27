@@ -13,4 +13,9 @@ conflict (which only warns).
 Used to validate / re-capture the classifier's test fixtures against new Renovate
 versions. See `tests/artifact-classifier/README.md` in khepri-deps/renovate.
 
+It also carries a minimal Nix flake (`flake.nix`, `flake.lock`). Nix **is**
+installed by the workflow, so its pull-request run points Renovate at this repo
+with only the `nix` manager enabled and expects `nix flake update` to run
+without an artifact error: the positive counterpart to the poetry case.
+
 This repo intentionally has no CI and holds no secrets.
